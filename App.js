@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import ReaderSDK from 'react-native-sp-reader-sdk';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,6 +19,13 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  constructor()
+  {
+    super();
+    const readerSdk = new ReaderSDK();
+    readerSdk.initSdk();
+    console.log("readerSDK ",readerSdk);
+  }
   render() {
     return (
       <View style={styles.container}>
