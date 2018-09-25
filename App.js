@@ -25,6 +25,15 @@ export default class App extends Component<Props> {
     const readerSdk = new ReaderSDK();
     readerSdk.initSdk();
     console.log("readerSDK ",readerSdk);
+    readerSdk.authorizeWithCode('sq0acp-3CGCQ2BB9NnUUzK4ZI46njBoKphb9-yKHhFm_6goxgQ').then((resp) => {
+      // success
+      console.log('Square Element Mobile token success', resp);
+
+    }).catch((err) => {
+      // failure
+      console.log('Square Elements Mobile token error', err);
+
+    });
   }
   render() {
     return (
