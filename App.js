@@ -25,7 +25,7 @@ export default class App extends Component<Props> {
     const readerSdk = new ReaderSDK();
     readerSdk.initSdk();
     console.log("readerSDK ",readerSdk);
-    readerSdk.authorizeWithCode('sq0acp-*******').then((resp) => {
+    readerSdk.authorizeWithCode('sq0acp-*********').then((resp) => {
       // success
       console.log('Square Element Mobile token success', resp);
 
